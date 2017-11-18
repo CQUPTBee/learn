@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>难民集中营</title>
+	<style>
+	*{margin: 0;padding: 0;}
+	body{
+		background-color: #00c1ff;
+		-webkit-transition: background-color 400ms ease-in-out;
+		-ms-transition: background-color 400ms ease-in-out;
+		-o-transition: background-color 400ms ease-in-out;
+		-moz-transition: background-color 400ms ease-in-out;
+		transition: background-color 400ms ease-in-out;
+	}
+	.container {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+	}
+	#output {
+		opacity: 0.3;
+		width: 100%;
+		height: 100%;
+		-webkit-transition: all 400ms ease-in-out;
+		-ms-transition: all 400ms ease-in-out;
+		-o-transition: all 400ms ease-in-out;
+		-moz-transition: all 400ms ease-in-out;
+		transition: all 400ms ease-in-out;
+	}
+	</style>
+	<link rel="stylesheet" href="css/aui.css" />
+	<script src="js/jquery.js"></script>
+	<script src="js/FSS.js"></script>
+	<script src="js/aui.js" language="javascript" type="text/javascript"></script>
+	<script src="js/Aui-core-1.42-min.js" language="javascript" type="text/javascript"></script>
+	<script>
+	$(function(){
+		FSS("container", "output");
+		$(".color li").mouseover(function(event) {
+			$("body").css("background-color", $(this).css("background-color"));
+		});
+	});
+	</script>
+	<script language="javascript" type="text/javascript">
+Aui.ready( function(){
+	if( /ie/g.test( Aui.browser() ) ){
+		Aui("body").html("Adam CSS 3.0 effect，支持非IE浏览器。你懂的！")
+				   .setStyle(
+				   {
+				   	"color" : "#fff",
+
+				   	"text-align" : "center",
+
+				    "font-size" : "50px",
+
+				    "font-weight" : "bolder",
+
+				    "line-height" : "500px"
+				   });
+
+	}else{
+		Effect( 
+
+			[ "images/01.jpg", "images/02.jpg", "images/03.jpg", "images/01.jpg", "images/02.jpg", "images/03.jpg", "images/01.jpg", "images/02.jpg", "images/03.jpg"],
+
+			200,
+
+			300,
+
+			Aui.byID("#stage"),
+
+			2000,
+
+			-10,
+
+			0,
+			[ "http://www.baidu.com", "http://123.sogou.com", "http://www.sogou.com","http://www.baidu.com", "http://123.sogou.com", "http://www.sogou.com" ]
+		 ).init();
+	};
+
+});
+
+</script>
+</head>
+<body>
+	<!-- dom结构 可自定义 -->
+	<div id="container" class="container">
+	    <div id="output"></div>
+	</div>
+	<dl id="stage"></dl>
+</body>
+</html>
